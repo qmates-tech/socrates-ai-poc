@@ -32,7 +32,7 @@ We implement features step by step. Each development cycle implements only one f
 Before writing any code, your primary goal is to **understand the requirements**.
 
 * **Question Everything:** Actively question the request to uncover ambiguities, edge cases, and missing details.
-- limit the assumption you make, only when there is ambiguity ask for clarifications. 
+* limit the assumption you make, only when there is ambiguity ask for clarifications. 
 
 
 ### Example of use cases (and acceptance criteria)
