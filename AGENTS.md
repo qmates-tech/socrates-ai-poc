@@ -36,15 +36,15 @@ Before writing any code, your primary goal is to **understand the requirements**
 
 
 ### Example of use cases (and acceptance criteria)
-- Scenario Availability check (guest user)
+#### Scenario Availability check (guest user)
 The user accesses the conference website and opens the registration page.
 The system shows available rooms and event slots with the current remaining capacity.
 If the maximum registrations limit is reached, the system blocks further attempts and shows a “No availability” message.
 Acceptance criteria:
-Guest sees the total available slots for the event.
-Guest sees the available hotel room options.
-If no slots are available, the system prevents proceeding to booking.
-- Scenario Registration / Request booking (guest user)
+- Guest sees the total available slots for the event.
+- Guest sees the available hotel room options.
+- If no slots are available, the system prevents proceeding to booking.
+#### Scenario Registration / Request booking (guest user)
 The user fills the booking form with personal details (name, surname, email, phone), selects event slot and hotel room type.
 The system validates mandatory fields and checks availability.
 Upon success, the system saves the booking as “pending payment” and triggers three confirmation emails:
@@ -52,35 +52,35 @@ To the participant (booking summary, payment info).
 To the hotel desk (new pending booking).
 To the event organizer (updated participants count).
 Acceptance criteria:
-User cannot confirm booking with missing mandatory fields.
-User receives confirmation email.
-Hotel desk and event organizer receive notification.
-Booking is marked “pending payment” until backoffice updates it.
-Scenario Set availability (event organizer)
+- User cannot confirm booking with missing mandatory fields.
+- User receives confirmation email.
+- Hotel desk and event organizer receive notification.
+- Booking is marked “pending payment” until backoffice updates it.
+####Scenario Set availability (event organizer)
 Event organizer logs into backoffice.
 Organizer sets the maximum number of registrations allowed for the event.
 Organizer updates availability for specific workshops or sessions.
 System applies changes immediately and reflects them in guest availability check.
 Acceptance criteria:
-Organizer can modify event capacity.
-Capacity updates are immediately visible to guest users.
-Once limit is reached, system blocks new bookings automatically.
-Scenario Register payment (hotel backoffice user)
+- Organizer can modify event capacity.
+- Capacity updates are immediately visible to guest users.
+- Once limit is reached, system blocks new bookings automatically.
+#### Scenario Register payment (hotel backoffice user)
 Hotel backoffice user logs into hotel backoffice.
 User sees the list of pending bookings.
 User selects a booking and marks it as “paid”.
 System updates booking status and triggers an email to the participant confirming payment.
 Event organizer also receives updated participant status.
 Acceptance criteria:
-Backoffice user can change booking status from pending to paid.
-Participant receives payment confirmation email.
-Organizer is notified of confirmed participant.
-Scenario Cancel booking (participant user)
+- Backoffice user can change booking status from pending to paid.
+- Participant receives payment confirmation email.
+- Organizer is notified of confirmed participant.
+#### Scenario Cancel booking (participant user)
 Participant logs in with their booking reference.
 Participant requests cancellation.
 System updates booking status to “cancelled” and frees the slot if within allowed cancellation window.
 Emails are triggered to participant, hotel backoffice, and event organizer.
 Acceptance criteria:
-Cancellation not allowed after event start date.
-Slot becomes available again if cancelled before deadline.
-All parties notified of cancellation.
+- Cancellation not allowed after event start date.
+- Slot becomes available again if cancelled before deadline.
+- All parties notified of cancellation.
